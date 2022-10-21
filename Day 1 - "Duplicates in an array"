@@ -1,0 +1,51 @@
+#include<iostream>
+
+
+using namespace std;
+
+class array
+{
+	int i,arr[],n;
+    public:
+    array()
+    {
+        arr[i]=-1;
+    }
+    void duplicates()
+		
+    {
+    	cout<<"enter size:";
+        cin>>n;
+        cout<<"enter elements:";
+        cin>>arr[i];
+        
+        cout<<"duplicate elements are:";
+        
+        for(int i=0; i<n-1; i++)
+        {
+        	for(int j=i+1;j<n;j++)
+        	{
+            	if(arr[i]==arr[j])
+            	{
+            	cout<<"\n"<<arr[i];
+            	}
+            	else
+            	cout<<"duplicacies does not exist"<<endl;
+            	
+        	}
+        }
+        
+    }
+    
+    
+        
+};
+ int main()
+ {
+ 	array a1;
+ 	
+ 	a1.duplicates();
+ 	a1.duplicates();
+ 	return 0;
+ }
+    
