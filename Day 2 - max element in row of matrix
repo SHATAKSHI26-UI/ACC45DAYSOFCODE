@@ -1,0 +1,47 @@
+#include<iostream>
+using namespace std;
+
+int i = 0,j = 0;
+int count=0;
+int n=3;
+
+  void display()
+  {
+  	cout << "Enter no of rows of the matrix";
+  cin >> i;
+  cout << "Enter no of columns of the matrix";
+  cin >> j;
+
+  }
+  
+     void maxelement(n,arr) 
+	 {
+        int count = 0;
+         int max = 0;
+        int result[count];
+        while (count<i) {
+            for (int j = 0; j < 3; j++) {
+                if (arr[i][j] > max) {
+                    max = arr[i][j];
+                }
+            }
+            result[i] = max;
+            max = 0;
+            i++;
+ 
+     }
+     void printArray(int result[], int i)
+     {
+     	
+        	for (int  count= 0; count < i; count++)
+        	
+			{
+            	cout<< result[count]<<"\n";
+        	}
+	 }
+    int main()
+    {
+    	display();
+        maxelement(3, arr);
+        printArray(result,i);
+    }
