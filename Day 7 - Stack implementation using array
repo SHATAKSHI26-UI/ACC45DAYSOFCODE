@@ -1,0 +1,54 @@
+#include<iostream>
+using namespace std;
+DEFINE MAX =50
+
+class stack
+{
+int st[MAX],Stop;
+public:
+stack()
+{
+top = -1;
+}
+
+void push()
+{
+int val;
+if(top == MAX - 1)
+{
+cout,<"stack overflow";
+}
+else
+{
+top = top+1;
+cout<<"enter the value to be inserted";
+cin>>val;
+st[top] = val;
+}
+}
+
+int pop()
+{
+if(top == -1)
+{
+cout<<"stack overflow";
+return 0;
+}
+else
+{
+return st[--top];
+}
+void display()
+{
+for(int i = top; i>=0;i--)
+{
+cout<<st[i];
+}
+
+int main()
+{
+stack s
+s.push();
+s.push();
+s.pop();
+s.display();
