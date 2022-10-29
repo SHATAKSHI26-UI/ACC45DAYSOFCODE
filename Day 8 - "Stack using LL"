@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+  
+class Node {
+   public:
+   int data;
+   Node* next;
+   };
+  
+Node* newNode(int data) {
+   Node* SNode = new Node();
+   SNode->data = data;
+   SNode->next = NULL;
+   return SNode;
+   }
+  
+int isEmpty(Node *root) {
+   return !root;
+   }
+  
+void push(Node** root, int new_data){
+   Node*SNode = newNode(new_data);
+   SNode->next = *root;
+   *root = SNode;
+   cout<<new_data<<endl;
+   }
+  
+int pop(Node** root){
+   if (isEmpty(*root))
+   return -1;
+   Node* temp = *root;
+   *root = (*root)->next;
+   int popped = temp->data;
+   free(temp);
+  
+   return popped;
+}
+int peek(Node* root)
+{
+   if (isEmpty(root))
+   return -1;
+   return root->data;
+}
+  
+int main()
+{
+   Node* root = NULL;
+   cout<<"Stack Push:"<<endl;
+   push(&root, 5);
+   push(&root, 10);
+   push(&root, 15);
+   cout<<"\nTop element is "<<peek(root)<<endl;
+   cout<<"\nStack Pop:"<<endl;
+   while(!isEmpty(root)){
+   cout<<pop(&root)<<endl;
+}
+  
+cout<<"Top element is "<<peek(root)<<endl;
+  
+return 0;
+}
