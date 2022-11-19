@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+int fib_iter(int n, int next, int result)
+{
+   int temp_n;
+   int temp_next;
+   int temp_result;
+
+   while (n != 0) {
+      temp_n = n;
+      temp_next = next;
+      temp_result = result;
+
+      n = temp_n - 1;
+      next = temp_next + temp_result;
+      result = temp_next;
+   }
+   return result;
+}
+}
